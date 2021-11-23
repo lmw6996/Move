@@ -70,7 +70,6 @@ public class MovieSearch extends AppCompatActivity {
                 String[] strings = {search_url};
                 MyAsyncTask mAsyncTask = new MyAsyncTask();
                 mAsyncTask.execute(strings[0]);
-
                 //여기서 AsyncTask를 이용 검색 리퀘스트로 데이터를 받아 오게 처리 하자. - AsyncTask 공유할것.
 
                 return false;
@@ -164,7 +163,7 @@ public class MovieSearch extends AppCompatActivity {
         }
     }
 
-    }
+}
 
 
 

@@ -51,7 +51,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
         String title2= mMovieList.get(position).getTitle();
         holder.titleView.setText(title2);
         String release2=mMovieList.get(position).getRelease_date();
-        holder.releaseView.setText("개봉일 :\n"+release2);
+        holder.releaseView.setText("개봉일 : "+release2);
         String average= mMovieList.get(position).getVote_average();
         holder.voteView.setText("평점 : "+average);
 
@@ -61,10 +61,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
             public void onClick(View view) {
                 Intent intent = new Intent(mContext, DetailActivity.class);
                 intent.putExtra("title", mMovieList.get(position).getTitle());
-                intent.putExtra("original_title", mMovieList.get(position).getOriginal_title());
                 intent.putExtra("poster_path", "https://image.tmdb.org/t/p/w500"+mMovieList.get(position).getPoster_path());
-                intent.putExtra("overview", mMovieList.get(position).getOverview());
-                intent.putExtra("release_date", mMovieList.get(position).getRelease_date());
                 mContext.startActivity(intent);
 
             }
